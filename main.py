@@ -65,7 +65,7 @@ Mời nhập vào lựa chọn: """))
                             print(f"Vị trí hợp lệ nên là: 1 - {len(order_list)}")
                         else:
                             new_product_id = input("Mời bạn nhập vào mã đơn hàng: ").strip().upper()
-                            new_product_status = input("Mời bạn nhập vào trạng thái (PENDING, DELIVERING, COMPLETED, CANCELLED): ")
+                            new_product_status = input("Mời bạn nhập vào trạng thái (PENDING, DELIVERING, COMPLETED, CANCELLED): ").strip().upper()
                             
                             format_new_product = f"{new_product_id} - {new_product_status}"
                             
@@ -73,7 +73,7 @@ Mời nhập vào lựa chọn: """))
                             print("Đã cập nhật thành công")
                     case 3:
                         # 2.3. Xóa đơn hàng theo vị trí
-                        delete_index = int("Mời bạn nhập vào vị trí cần xóa (bắt đầu từ 0):")
+                        delete_index = int(input("Mời bạn nhập vào vị trí cần xóa (bắt đầu từ 0):"))
                         
                         if delete_index < 0 or delete_index > len(order_list):
                             print("KHÔNG TỒN TẠI VỊ TRÍ NÀY ĐỂ XÓA")
